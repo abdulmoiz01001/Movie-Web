@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
 const corsOptions = {
-    origin: 'https://movie-web-peach-seven.vercel.app',
+    origin: '*', // Allow all origins
     credentials: true, // Allow credentials (cookies) to be sent
 };
 app.use(cors(corsOptions));
