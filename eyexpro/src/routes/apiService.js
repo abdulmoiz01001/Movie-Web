@@ -1,8 +1,8 @@
 import axios from 'axios';
 const api = axios.create({
-    baseURL: 'https://movie-web-api-pink.vercel.app/api',
+    baseURL: 'https://movie-web-api-pink.vercel.app',
     withCredentials: true // Adjust the base URL if needed
-      
+
 });
 
 // Frontend API function to handle user signup and set cookie
