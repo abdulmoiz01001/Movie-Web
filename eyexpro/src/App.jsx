@@ -65,6 +65,7 @@ function App() {
         <Route path='/auth/Logout' element={<Logout />} />
         <Route path='/' element={<Home />} />
         <Route path='/movie/:mediaType/:id' element={<Details />} />
+        {/* <Route path='/movie/:id' element={<Details />} /> */}
         <Route path='/search/:query' element={<SearchResult />} />
         <Route path='/explore/:mediaType' element={<Explore />} />
         <Route path='*' element={<PageNotFound />} />

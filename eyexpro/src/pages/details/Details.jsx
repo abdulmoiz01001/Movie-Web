@@ -15,15 +15,15 @@ const Details = () => {
   const { mediaType, id} = useParams();
   const {data, loading} = useFetch(`/${mediaType}/${id}/videos`)
   const {data: credits, loading: creditsLoading} = useFetch(`/${mediaType}/${id}/credits`)
-//   useEffect(() => {
-//     // Check for the token in localStorage
-//     const token = localStorage.getItem('token');
+  useEffect(() => {
+    // Check for the token in localStorage
+    const token = localStorage.getItem('token');
 
-//     if (!token) {
-//         // If no token is found, navigate to the home, login, or signup route
-//         navigate('/auth/login'); // or '/signup' or '/'
-//     }
-// }, []); 
+    if (!token) {
+        // If no token is found, navigate to the home, login, or signup route
+        navigate('/auth/login'); // or '/signup' or '/'
+    }
+}, []); 
   return (
     <div>
       <DetailsBanner video={data?.results?.[0]} crew={credits?.crew} />
