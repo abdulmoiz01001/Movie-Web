@@ -21,14 +21,14 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
 const corsOptions = {
-    origin: 'http://localhost:5173',
+    origin: 'https://movie-web-peach-seven.vercel.app/',
     credentials: true, // Allow credentials (cookies) to be sent
 };
 app.use(cors(corsOptions));
 
 // Use authMiddleware after setting up required middlewares
 // app.use(authMiddleware);
-
+console.log("Hello");
 app.use(express.json());
 app.use(expressLayout);
 app.set('layout', './layout/main');
