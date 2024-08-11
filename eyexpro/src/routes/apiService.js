@@ -1,6 +1,6 @@
 import axios from 'axios';
 const api = axios.create({
-    baseURL: 'http://localhost:5000/api',
+    baseURL: 'https://movie-web-api-pink.vercel.app/api',
     withCredentials: true // Adjust the base URL if needed
 });
 
